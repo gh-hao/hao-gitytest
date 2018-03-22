@@ -13,5 +13,18 @@ git使用:
 $ git status  查看库状态 提交状况
 $ git diff 或者 $ git diff 具体文件名（readme.txt）查看文件提交修改状态况 与本地对比
 $ git log 查看代码提交记录
+$ git relog 查看命令历史
 
 修改文件后也要使用 增加和提交命令
+
+回退和恢复版本
+$ git reset --hard HEAD^  回到上一个版本，本地代码直接变回
+$ git reset --hard HEAD^^  回到上上个版本
+$ git reset --hard HEAD~100  回到往前100个版本
+$ git reset --hard 3628164  直接使用版本号回退，更准确，只写前几位就可以，git会搜索
+原理：Git在内部有个指向当前版本的HEAD指针，回退只是将指针指向了指定版本，并且更新了工作区的文件。
+
+git add命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行git commit就可以一次性把暂存区的所有修改提交，指针同时指向最新。
+所以 如果修改了文件，只add 不commit文件并不会被提交
+
+
