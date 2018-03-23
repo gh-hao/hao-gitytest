@@ -38,3 +38,17 @@ git checkout -- readme.txt
 删除文件
 $ git rm readme.txt
 
+远程库
+由于你的本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以我们需要配置验证信息
+1.$ ssh-keygen -t rsa -C "youremail@example.com"
+2.默认回车
+3.在C盘找到 .ssh文件夹，打开 id_rsa.pub，复制文件内容
+4.在 github打开个人账户，找到setting，左侧目录打开 SSH and GPG keys
+5. 点击 New SSH key 
+6.起名字，在key中粘贴之前复制内容， Add SSH key 
+7. $ ssh -T git@github.com 验证是否成功
+
+将本地库关联至github远程库
+$ git remote add origin git@github.com:gh-hao/hao-gitytest.git
+$ git push -u origin master
+
