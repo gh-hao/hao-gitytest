@@ -1,4 +1,4 @@
-git使用:
+﻿git使用:
 创建库
 1.在某盘目录下面创建文件夹，例如 D:\git
 2.打开 git bash ，用于命令符操作
@@ -51,4 +51,7 @@ $ git rm readme.txt
 将本地库关联至github远程库
 $ git remote add origin git@github.com:gh-hao/hao-gitytest.git
 $ git push -u origin master
+
+
+xxxxxxx
 
